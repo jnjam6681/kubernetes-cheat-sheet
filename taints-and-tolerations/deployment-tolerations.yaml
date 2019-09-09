@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replecas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spac:
+      # https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+      tolerations:
+      - key: "type"
+        operator: "Equal"
+        value: "specialnode"
+        effect: "NoSchedule"
+      containers:
+        - name: nginx
+          image: nginx:1.7.9
+          ports:
+          - name: nginx-port
+            containerPort: 80

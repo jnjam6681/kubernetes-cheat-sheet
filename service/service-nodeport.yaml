@@ -9,7 +9,7 @@ spec:
   - nodePort: 31001
     port: 80
     protocol: TCP
-    targetPort: frontend-port
+    targetPort: nginx-port
   type: NodePort
 
 # https://kubernetes.io/docs/concepts/services-networking/service/#nodeport

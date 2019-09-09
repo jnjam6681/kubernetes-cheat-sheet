@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: nginx-port
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: nginx-https-port
+  type: ClusterIP
+
+# https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services

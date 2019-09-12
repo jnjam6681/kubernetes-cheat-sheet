@@ -20,3 +20,5 @@ spec:
           ports:
           - name: nginx-port
             containerPort: 80
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/

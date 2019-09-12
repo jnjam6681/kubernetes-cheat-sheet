@@ -21,3 +21,7 @@ helm install --name cert-manager --namespace kube-system jetstack/cert-manager
 kubectl describe certificate
 kubectl describe secert
 ```
+#### Reference
+```
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-with-cert-manager-on-digitalocean-kubernetes
+```

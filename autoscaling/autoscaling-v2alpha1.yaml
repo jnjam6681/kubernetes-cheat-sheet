@@ -17,3 +17,5 @@ spec:
     resource:
       name: memory
       targetAverageValue: 1000Mi
+
+# https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/

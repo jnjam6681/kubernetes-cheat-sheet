@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: nginx
-    spac:
+    spec:
       # https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
       tolerations:
       - key: "type"

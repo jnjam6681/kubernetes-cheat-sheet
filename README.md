@@ -149,39 +149,39 @@
 * `kubectl annotate no [node_name]`
 
 ## Adding Resource
-# Creating a Pod
+#### Creating a Pod
 * `kubectl create -f [name_of_file]`
 * `kubectl apply -f [name_of_file]`
 * `kubectl run [pod_name] --image=nginx --restart=Never`
 * `kubectl run [pod_name] --generator=run-pod/v1 --image=nginx`
 * `kubectl run [pod_name] --image=nginx --restart=Never`
 
-# Creating a Service
+#### Creating a Service
 * `kubectl create svc nodeport [svc_name] --tcp=8080:80`
 
-# Creating a Deployment
+#### Creating a Deployment
 * `kubectl create -f [name_of_file]`
 * `kubectl apply -f [name_of_file]`
 * `kubectl create deploy [deploy_name] --image=nginx`
 
-# Interactive Pod
+#### Interactive Pod
 * `kubectl run [pod_name] --imange=busybox --rm -it --restart=Never -- sh`
 
-# Out put YAML to a File
+#### Out put YAML to a File
 * `kubectl create deploy [deploy_name] --image=nginx --dry-run -o yaml > deploy.yaml`
 * `kubectl get po [pod_name] -o yaml --export > pod.yaml`
 
-# Getting Help
+#### Getting Help
 * `kubectl -h`
 * `kubectl create -h`
 * `kubectl run -h`
 * `kubectl explain deploy.spec`
 
-## Requests
+#### Requests
 # API Call
 * `kubectl get --raw /apis/metrics.k8s.io/`
 
-# Cluster Info
+#### Cluster Info
 * `kubectl config`
 * `kubectl cluster-info`
 * `kubectl get componentstatuses`

@@ -1,7 +1,7 @@
 apiVersion: certificates.k8s.io/v1beta1
 kind: CertificateSigningRequest
 metadata:
-  name: akshay
+  name: john
 spec:
   groups:
   - system:authenticated

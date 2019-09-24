@@ -1,6 +1,16 @@
 ## KubeConfig
 
-#### Describe one or many contexts 
+#### Generate a CA private key
+```
+openssl genrsa -out john.key 2048
+```
+
+#### Create a self signed Certificate
+```
+openssl req -new -key john.key -subj "/CN=john" -out john.csr
+```
+
+#### Describe one or many contexts
 ```
 kubectl config  get-contexts
 ```

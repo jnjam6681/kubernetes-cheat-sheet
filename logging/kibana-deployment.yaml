@@ -33,23 +33,23 @@ spec:
             value: http://elasticsearch-logging:9200
           - name: SERVER_NAME
             value: kibana-logging
-          - name: SERVER_BASEPATH
-            value: /api/v1/namespaces/kube-system/services/kibana-logging/proxy
+          # - name: SERVER_BASEPATH
+          #   value: /api/v1/namespaces/kube-system/services/kibana-logging/proxy
           - name: SERVER_REWRITEBASEPATH
             value: "false"
         ports:
         - containerPort: 5601
           name: ui
           protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /api/status
-            port: ui
-          initialDelaySeconds: 5
-          timeoutSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /api/status
-            port: ui
-          initialDelaySeconds: 5
-          timeoutSeconds: 10
+        # livenessProbe:
+        #   httpGet:
+        #     path: /api/status
+        #     port: ui
+        #   initialDelaySeconds: 5
+        #   timeoutSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /api/status
+        #     port: ui
+        #   initialDelaySeconds: 5
+        #   timeoutSeconds: 10

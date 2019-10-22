@@ -10,13 +10,24 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/
 ```
 #### Create ServiceAccount
 ```
-kubectl apply -f dashboard-service-account.yaml
+kubectl apply -f ./create-user/dashboard-service-account-user.yaml
 ```
 #### Create ClusterRoleBinding
 ```
-kubectl apply -f dashboard-cluster-role-binding.yaml
+kubectl apply -f ./create-user/dashboard-cluster-role-binding-user.yaml
 ```
 #### Get Bearer Token
 ```
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
+#### To Access Dashboard
+```
+kubectl proxy
+```
+#### Connect To Dashboard
+[`http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/`](
+http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
+#### References
+- [`https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard`](https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard)
+- [`https://github.com/kubernetes/dashboard/blob/v1.10.0/src/deploy/recommended/kubernetes-dashboard.yaml`](https://github.com/kubernetes/dashboard/blob/v1.10.0/src/deploy/recommended/kubernetes-dashboard.yaml)
+- [`https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md`](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md)

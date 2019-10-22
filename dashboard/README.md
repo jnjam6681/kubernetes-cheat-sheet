@@ -29,5 +29,5 @@ kubectl proxy
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
 #### References
 - [`https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard`](https://github.com/helm/charts/tree/master/stable/kubernetes-dashboard)
-- [`https://github.com/kubernetes/dashboard/blob/v1.10.0/src/deploy/recommended/kubernetes-dashboard.yaml`](https://github.com/kubernetes/dashboard/blob/v1.10.0/src/deploy/recommended/kubernetes-dashboard.yaml)
+- [`https://github.com/kubernetes/dashboard/tree/v2.0.0-beta5/aio/deploy/recommended`](https://github.com/kubernetes/dashboard/tree/v2.0.0-beta5/aio/deploy/recommended)
 - [`https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md`](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md)

@@ -39,7 +39,5 @@ kubectl delete csr john
 ```
 
 #### Reference
-```
-- https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
-- https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
-```
+- [`https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/`](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
+- [`https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/`](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)

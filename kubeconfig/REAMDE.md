@@ -28,7 +28,5 @@ kubectl config --kubeconfig=/root/my-kube-config use-context [current_context]
 ```
 
 #### References
-```
-- https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-- https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
-```
+- [`https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/`](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
+- [`https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/`](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)

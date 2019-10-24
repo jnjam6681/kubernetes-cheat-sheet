@@ -33,6 +33,10 @@ spec:
             value: http://elasticsearch-logging:9200
           - name: SERVER_NAME
             value: kibana-logging
+          - name: SERVER_HOST
+            value: "0.0.0.0"
+          # - name: SERVER_BASEPATH
+          #   value: /kibana
           # - name: SERVER_BASEPATH
           #   value: /api/v1/namespaces/kube-system/services/kibana-logging/proxy
           - name: SERVER_REWRITEBASEPATH

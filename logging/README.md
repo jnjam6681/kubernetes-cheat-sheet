@@ -10,6 +10,11 @@ kubectl port-forward kibana-pod 5601:5601 --namespace=kube-system
 #### Creating An htpasswd File
 ```
 htpasswd -c auth foo
+
+New password: <bar>
+New password:
+Re-type new password:
+Adding password for user foo
 ```
 #### Create a Secret
 ```
@@ -34,9 +39,9 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    ingress.kubernetes.io/auth-type: basic
-    ingress.kubernetes.io/auth-secret: basic-auth
-    ingress.kubernetes.io/auth-realm: "Authentication Required - monitoring"
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: basic-auth
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required - foo"
 ...
 ```
 #### References

@@ -7,3 +7,7 @@ echo -n 'hello' | base64
 ```
 echo -n 'glhs4='' | base64 —-decode
 ```
+#### Build secrets form env file
+```
+kubectl create secret generic my-secret --from-env-file=.env
+```

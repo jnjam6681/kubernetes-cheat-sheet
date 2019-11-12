@@ -21,13 +21,14 @@ spec:
           - name: nginx-port
             containerPort: 80
       affinity:
-        nodeAffinity:
+        podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: "app"
-                operator: In
-                values:
-                - helloworld-affinity
+            - labelSelector:
+                matchExpressions:
+                  - key: "app"
+                    operator: In
+                    values:
+                    - helloworld-affinity
+              topologyKey: "kubernetes.io/hostname"
 
 # https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#node-affinity

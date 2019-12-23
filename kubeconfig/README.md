@@ -9,6 +9,11 @@ openssl genrsa -out john.key 2048
 ```
 openssl req -new -key john.key -subj "/CN=john" -out john.csr
 ```
+or
+```
+openssl req -new -key john.pem -out john-csr.pem -subj "/CN=john"
+openssl x509 -req -in john-csr.pem -CA ca.crt -CAkey ca.key -CAcreateserial -out john.crt -day 10000
+```
 
 #### Describe one or many contexts
 ```

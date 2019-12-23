@@ -9,7 +9,7 @@ openssl genrsa -out john.key 2048
 ```
 openssl req -new -key john.key -subj "/CN=john" -out john.csr
 ```
-or
+Or
 ```
 openssl req -new -key john.pem -out john-csr.pem -subj "/CN=john"
 openssl x509 -req -in john-csr.pem -CA ca.crt -CAkey ca.key -CAcreateserial -out john.crt -day 10000
@@ -30,6 +30,11 @@ kubectl config view --kubeconfig=[current_context]
 ```
 kubectl confin use-context [current_context]
 kubectl config --kubeconfig=/root/my-kube-config use-context [current_context]
+```
+Or
+```
+kubectl config set-credentails john --client-certificate=john.crt --client-key=john.pem
+kubectl config set-context john --cluster=kubernetes.john --user john
 ```
 
 #### References

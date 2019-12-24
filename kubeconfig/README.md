@@ -28,7 +28,7 @@ kubectl config view --kubeconfig=[current_context]
 
 #### Sets the current-context in a kubeconfig file
 ```
-kubectl confin use-context [current_context]
+kubectl config use-context [current_context]
 kubectl config --kubeconfig=/root/my-kube-config use-context [current_context]
 ```
 Or

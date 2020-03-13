@@ -22,14 +22,14 @@ spec:
             containerPort: 80
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
           livenessProbe:
-          initialDelaySeconds: 30
-          periodSeconds: 30
-          timeoutSeconds: 10
-          successThreshold: 1
-          failureThreshold: 3
-          httpGet:
-            path: /
-            port: nginx-port
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+            httpGet:
+              path: /
+              port: nginx-port
           readinessProbe:
             initialDelaySeconds: 30
             periodSeconds: 5

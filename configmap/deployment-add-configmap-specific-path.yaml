@@ -28,7 +28,7 @@ spec:
           configMap:
             name: nginx-configmap
             items:
-            - key: default.conf
+            - key: default
               path: default.conf
 
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#add-configmap-data-to-a-specific-path-in-the-volume

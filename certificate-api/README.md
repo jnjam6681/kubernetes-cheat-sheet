@@ -7,7 +7,7 @@ openssl genrsa -out john.key 2048
 
 #### Create a self signed Certificate
 ```
-openssl req -new -key john.key -subj "/CN=john" -out john.csr
+openssl req -new -key john.key -subj "/CN=john,O=system:master" -out john.csr
 ```
 
 #### Encode base64

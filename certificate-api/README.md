@@ -2,7 +2,7 @@
 
 #### Generate a CA private key
 ```
-openssl genrsa -out john.key 2048
+openssl genrsa -out john.key 4096
 ```
 
 #### Create a self signed Certificate
@@ -41,3 +41,4 @@ kubectl delete csr john
 #### Reference
 - [`https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/`](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
 - [`https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/`](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)
+- [`https://www.openlogic.com/blog/granting-user-access-your-kubernetes-cluster`](https://www.openlogic.com/blog/granting-user-access-your-kubernetes-cluster)

@@ -36,6 +36,26 @@ Or
 kubectl config set-credentails john --client-certificate=john.crt --client-key=john.pem
 kubectl config set-context john --cluster=kubernetes.john --user john
 ```
+---
+#### Get CA
+```
+kubectl config view -o jsonpath='{.clusters[0].cluster.certificate-authority-data}' --raw | base64 --decode - > k8s-ca.crt
+```
+
+#### Set CA and create kubeconfig
+```
+kubectl config set-cluster $(kubectl config view -o jsonpath='{.clusters[0].name}') --server=$(kubectl config view -o jsonpath='{.clusters[0].cluster.server}') --certificate-authority=k8s-ca.crt --kubeconfig=bob-k8s-config --embed-certs
+```
+
+#### Set user key to kubeconfig
+```
+$ kubectl config set-credentials bob --client-certificate=bob-k8s-access.crt --client-key=bob-k8s.key --embed-certs --kubeconfig=bob-k8s-config
+```
+
+#### Set Context kubeconfig
+```
+kubectl config set-context bob --cluster=$(kubectl config view -o jsonpath='{.clusters[0].name}') --user=bob --kubeconfig=bob-k8s-config
+```
 
 #### References
 - [`https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/`](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
